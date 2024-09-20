@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Form</title>
+</head>
+<body>
+
+    <h1>Simple Form</h1>
+
+    <form action="/submit" method="post">
+        <!-- Text Input -->
+        <label>Name:</label>
+        <input type="text" name="name">
+        <br><br>
+
+        <!-- Email Input -->
+        <label>Email:</label>
+        <input type="email" name="email">
+        <br><br>
+
+        <!-- Password Input -->
+        <label>Password:</label>
+        <input type="password" name="password">
+        <br><br>
+
+        <!-- Radio Buttons -->
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <br><br>
+
+        <!-- Checkbox -->
+        <label>Subscribe to newsletter:</label>
+        <input type="checkbox" name="subscribe">
+        <br><br>
+
+        <!-- Dropdown -->
+        <label>Country:</label>
+        <select name="country">
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="ca">Canada</option>
+            <option value="au">Australia</option>
+        </select>
+        <br><br>
+
+        <!-- Textarea -->
+        <label>Message:</label>
+        <textarea name="message" rows="4" cols="50"></textarea>
+        <br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .box {
+            width: 300px;
+            height: 150px;
+            border: 2px solid #333;
+            background-color: #fff;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: auto; 
+        }
+
+        .content {
+            width: 600px; 
+            height: 300px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="content">
+            <h1>Overflow Example</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Sed ultricies nisl nec orci varius, at sagittis metus pharetra. Mauris ac augue eu lorem blandit gravida. Duis nec libero id ligula viverra hendrerit. Aenean a magna non metus tristique sollicitudin. Fusce a lorem ac est fermentum luctus. Donec ut nisl auctor, aliquam sapien in, varius mi. Nullam in sem urna. Nullam vel urna eget lectus sagittis varius.</p>
+            <p>More content to demonstrate overflow behavior. Keep adding more content here to see how overflow works.</p>
+           
+        </div>
+    </div>
+</body>
+</html>

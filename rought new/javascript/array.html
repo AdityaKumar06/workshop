@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Array Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Array Example</h1>
+    <div id="output"></div>
+    
+    <button onclick="addFruit()">Add Orange</button>
+    <button onclick="removeFruit()">Remove Last Fruit</button>
+    
+    <script>
+        const fruits = ['Apple', 'Banana', 'Cherry'];
+
+        function displayFruits() {
+            document.getElementById('output').innerHTML = fruits.join(', ');
+        }
+
+        function addFruit() {
+            fruits.push('Orange');
+            displayFruits();
+        }
+
+        function removeFruit() {
+            fruits.pop();
+            displayFruits();
+        }
+
+        displayFruits(); 
+    </script>
+    
+</body>
+</html>

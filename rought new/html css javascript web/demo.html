@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: black;
+            color: white;
+            overflow-x: hidden;
+        }
+/* 
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        } */
+
+
+        /* header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            animation: fadeInDown 1s ease-out;
+        } */
+
+        /* header h1 {
+            font-size: 48px;
+            margin: 0;
+            color: gold;
+            font-weight: bold;
+            letter-spacing: 2px;
+        } */
+
+        /* nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        } */
+
+        /* nav ul li {
+            margin-right: 30px;
+        } */
+
+        /* nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        } */
+/* 
+        nav ul li a:hover {
+            color: gold;
+        } */
+
+       
+        /* .intro {
+            text-align: center;
+            padding: 100px 0;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1200x600');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            animation: fadeIn 2s ease-out;
+        } */
+
+        /* .intro h2 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: zoomIn 2s ease-out;
+        } */
+/* 
+        .intro p {
+            font-size: 24px;
+            animation: fadeIn 3s ease-out;
+        } */
+
+        /* Section Styles */
+        /* section {
+            padding: 60px 20px;
+            text-align: center;
+        } */
+
+        /* section h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        } */
+
+        /* section h2:after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background-color: gold;
+            margin: 10px auto;
+        } */
+
+        /* section p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        } */
+
+        /* .projects-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        } */
+
+        /* .project {
+            position: relative;
+            text-align: center;
+            margin-bottom: 30px;
+        } */
+
+        /* .project img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        } */
+
+        /* .project:hover img {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.7);
+        } */
+
+        /* .project h3 {
+            margin-top: 15px;
+            font-size: 24px;
+            color: gold;
+        } */
+
+    
+        /* .custom-buttons {
+            margin-top: 40px;
+        } */
+
+        /* .custom-buttons button {
+            background-color: transparent;
+            border: 2px solid gold;
+            padding: 12px 30px;
+            color: gold;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            border-radius: 30px;
+        } */
+/* 
+        .custom-buttons button:hover {
+            background-color: gold;
+            color: black;
+            transform: scale(1.1);
+        } */
+
+      
+        /* form {
+            max-width: 600px;
+            margin: 0 auto;
+        } */
+
+        /* form label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: left;
+        } */
+
+        /* form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        } */
+
+        /* form button {
+            padding: 12px 40px;
+            background-color: gold;
+            color: black;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.4s ease;
+            border-radius: 30px;
+        } */
+
+        /* form button:hover {
+            background-color: darkorange;
+            transform: translateY(-5px);
+        } */
+
+        
+        /* footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #111;
+            font-size: 18px;
+        } */
+
+/*         
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        } */
+
+        /* @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        } */
+
+        /* @keyframes zoomIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <!-- <header>
+            <h1>My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header> -->
+
+       
+        <!-- <section class="intro" id="home">
+            <h2>Hello, I'm Your Name</h2>
+            <p>Web Developer | Designer | Creative</p>
+        </section> -->
+
+   
+        <!-- <section id="about">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a justo at lectus fermentum commodo.</p>
+        </section> -->
+
+   
+        <!-- <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-gallery">
+                <div class="project">
+                    <img src="https://via.placeholder.com/300" alt="Project 1">
+                    <h3>Project 1</h3>
+                </div>
+                <div class="project">
+                    <img src="https://via.placeholder.com/300" alt="Project 2">
+                    <h3>Project 2</h3>
+                </div>
+                <div class="project">
+                    <img src="https://via.placeholder.com/300" alt="Project 3">
+                    <h3>Project 3</h3>
+                </div>
+            </div>
+        </section> -->
+
+     
+        <!-- <section id="custom-buttons">
+            <h2>Custom Buttons</h2>
+            <div class="custom-buttons">
+                <button onclick="alertMessage('Red button clicked!')">Red Button</button>
+                <button onclick="alertMessage('Green button clicked!')">Green Button</button>
+                <button onclick="alertMessage('Blue button clicked!')">Blue Button</button>
+                <button onclick="changeBackground()">Change Background</button>
+            </div>
+        </section> -->
+
+        
+        <!-- <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </section> -->
+
+     
+        <!-- <footer>
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </footer> -->
+    </div>
+<!-- 
+    <script>
+  
+        function alertMessage(message) {
+            alert(message);
+        }
+
+        function changeBackground() {
+            document.body.style.backgroundColor = document.body.style.backgroundColor === 'black' ? '#333' : 'black';
+        }
+
+     
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted successfully!');
+        });
+    </script> -->
+</body>
+</html>

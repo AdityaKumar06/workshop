@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Operators Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .example {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Operators Examples</h1>
+
+    <div class="example">
+        <h2>1. Arithmetic Operators</h2>
+        <p>Addition (`+`): <span id="addition" class="result"></span></p>
+        <p>Subtraction (`-`): <span id="subtraction" class="result"></span></p>
+        <p>Multiplication (`*`): <span id="multiplication" class="result"></span></p>
+        <p>Division (`/`): <span id="division" class="result"></span></p>
+        <p>Modulus (`%`): <span id="modulus" class="result"></span></p>
+        <p>Exponentiation (`**`): <span id="exponentiation" class="result"></span></p>
+    </div>
+
+    <div class="example">
+        <h2>2. Assignment Operators</h2>
+        <p>Addition Assignment (`+=`): <span id="addition-assignment" class="result"></span></p>
+        <p>Subtraction Assignment (`-=`): <span id="subtraction-assignment" class="result"></span></p>
+        <p>Multiplication Assignment (`*=`): <span id="multiplication-assignment" class="result"></span></p>
+        <p>Division Assignment (`/=`): <span id="division-assignment" class="result"></span></p>
+        <p>Modulus Assignment (`%=`): <span id="modulus-assignment" class="result"></span></p>
+    </div>
+
+    <div class="example">
+        <h2>3. Comparison Operators</h2>
+        <p>Equal to (`==`): <span id="equal" class="result"></span></p>
+        <p>Strict Equal to (`===`): <span id="strict-equal" class="result"></span></p>
+        <p>Not Equal to (`!=`): <span id="not-equal" class="result"></span></p>
+        <p>Strict Not Equal to (`!==`): <span id="strict-not-equal" class="result"></span></p>
+        <p>Greater Than (`>`): <span id="greater-than" class="result"></span></p>
+        <p>Less Than (`<`): <span id="less-than" class="result"></span></p>
+        <p>Greater Than or Equal To (`>=`): <span id="greater-than-or-equal" class="result"></span></p>
+        <p>Less Than or Equal To (`<=`): <span id="less-than-or-equal" class="result"></span></p>
+    </div>
+
+    <div class="example">
+        <h2>4. Logical Operators</h2>
+        <p>Logical AND (`&&`): <span id="logical-and" class="result"></span></p>
+        <p>Logical OR (`||`): <span id="logical-or" class="result"></span></p>
+        <p>Logical NOT (`!`): <span id="logical-not" class="result"></span></p>
+    </div>
+
+    <div class="example">
+        <h2>5. Bitwise Operators</h2>
+        <p>Bitwise AND (`&`): <span id="bitwise-and" class="result"></span></p>
+        <p>Bitwise OR (`|`): <span id="bitwise-or" class="result"></span></p>
+        <p>Bitwise XOR (`^`): <span id="bitwise-xor" class="result"></span></p>
+        <p>Bitwise NOT (`~`): <span id="bitwise-not" class="result"></span></p>
+        <p>Left Shift (`<<`): <span id="left-shift" class="result"></span></p>
+        <p>Right Shift (`>>`): <span id="right-shift" class="result"></span></p>
+        <p>Unsigned Right Shift (`>>>`): <span id="unsigned-right-shift" class="result"></span></p>
+    </div>
+
+    <div class="example">
+        <h2>6. Unary Operators</h2>
+        <p>Unary Plus (`+`): <span id="unary-plus" class="result"></span></p>
+        <p>Unary Minus (`-`): <span id="unary-minus" class="result"></span></p>
+        <p>Increment (`++`): <span id="increment" class="result"></span></p>
+        <p>Decrement (`--`): <span id="decrement" class="result"></span></p>
+        <p>Typeof (`typeof`): <span id="typeof" class="result"></span></p>
+        <p>Instanceof (`instanceof`): <span id="instanceof" class="result"></span></p>
+    </div>
+
+    <div class="example">
+        <h2>7. Conditional (Ternary) Operator</h2>
+        <p>Conditional (`? :`): <span id="ternary" class="result"></span></p>
+    </div>
+
+    <script>
+        // Arithmetic Operators
+        let a = 5;
+        let b = 3;
+        document.getElementById('addition').textContent = a + b;
+        document.getElementById('subtraction').textContent = a - b;
+        document.getElementById('multiplication').textContent = a * b;
+        document.getElementById('division').textContent = a / b;
+        document.getElementById('modulus').textContent = a % b;
+        document.getElementById('exponentiation').textContent = a ** b;
+
+        // Assignment Operators
+        let c = 5;
+        c += 3;
+        document.getElementById('addition-assignment').textContent = c;
+        c -= 3;
+        document.getElementById('subtraction-assignment').textContent = c;
+        c *= 3;
+        document.getElementById('multiplication-assignment').textContent = c;
+        c /= 3;
+        document.getElementById('division-assignment').textContent = c;
+        c %= 3;
+        document.getElementById('modulus-assignment').textContent = c;
+
+        // Comparison Operators
+        let d = 5;
+        let e = '5';
+        document.getElementById('equal').textContent = (d == e);
+        document.getElementById('strict-equal').textContent = (d === e);
+        document.getElementById('not-equal').textContent = (d != e);
+        document.getElementById('strict-not-equal').textContent = (d !== e);
+        document.getElementById('greater-than').textContent = (d > e);
+        document.getElementById('less-than').textContent = (d < e);
+        document.getElementById('greater-than-or-equal').textContent = (d >= e);
+        document.getElementById('less-than-or-equal').textContent = (d <= e);
+
+        // Logical Operators
+        let f = true;
+        let g = false;
+        document.getElementById('logical-and').textContent = (f && g);
+        document.getElementById('logical-or').textContent = (f || g);
+        document.getElementById('logical-not').textContent = (!f);
+
+        // Bitwise Operators
+        let h = 5; // 0101 in binary
+        let i = 3; // 0011 in binary
+        document.getElementById('bitwise-and').textContent = (h & i);
+        document.getElementById('bitwise-or').textContent = (h | i);
+        document.getElementById('bitwise-xor').textContent = (h ^ i);
+        document.getElementById('bitwise-not').textContent = (~h);
+        document.getElementById('left-shift').textContent = (h << 1);
+        document.getElementById('right-shift').textContent = (h >> 1);
+        document.getElementById('unsigned-right-shift').textContent = (h >>> 1);
+
+        // Unary Operators
+        let j = 5;
+        document.getElementById('unary-plus').textContent = (+j);
+        document.getElementById('unary-minus').textContent = (-j);
+        document.getElementById('increment').textContent = (++j);
+        document.getElementById('decrement').textContent = (--j);
+        document.getElementById('typeof').textContent = (typeof j);
+        document.getElementById('instanceof').textContent = (j instanceof Number);
+
+        // Conditional (Ternary) Operator
+        let k = 5;
+        let l = 10;
+        document.getElementById('ternary').textContent = (k > l) ? 'k is greater' : 'l is greater';
+        
+    </script>
+</body>
+</html>

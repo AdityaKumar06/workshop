@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert, Prompt, and Confirm Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Alert, Prompt, and Confirm Example</h1>
+
+    <button onclick="showDialogs()">Click Me</button>
+
+    <script>
+        function showDialogs() {
+           
+            // alert("This is an alert message!");
+
+           
+            // let name = prompt("What is your name?", "John Doe");
+
+           
+            let confirmAction = confirm("Do you want to proceed?");
+
+            // if (confirmAction) {
+            //     alert("Hello, " + name + "! You chose to proceed.");
+            // } else {
+            //     alert("You canceled the action.");
+            // }
+        }
+    </script>
+
+</body>
+</html>

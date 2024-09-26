@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article Layout</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .parent {
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .trend-container,
+      .editor-choice-container,
+      .get-started-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+      }
+
+      .horizontal-line {
+        border: 0;
+        height: 1px;
+        background: #000;
+        width: 50px;
+        margin: 0 10px;
+      }
+
+      .trend,
+      .editor-choice,
+      .get-started {
+        margin: 0;
+      }
+
+      .article-title {
+        margin-top: 20px;
+        font-size: 24px;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .image-section {
+        flex: 0 0 400px;
+        margin-right: 73px;
+      }
+
+      .image-container {
+        width: 100%;
+        height: 240px;
+        overflow: hidden;
+        position: relative; /* For absolute positioning of overlay */
+        transition: transform 0.3s; /* Transition for scaling effect */
+      }
+
+      .image-container img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s; /* Smooth scaling effect */
+      }
+
+      .image-container:hover img {
+        transform: scale(1.1); /* Scale up on hover */
+      }
+
+      .image-title {
+        font-size: 18px;
+        margin-top: 10px;
+      }
+
+      .image-description {
+        margin-top: 5px;
+      }
+
+      .sidebar {
+        flex: 1;
+        margin-top: -26px;
+      }
+
+      .sidebar-item {
+        margin-bottom: 20px;
+      }
+
+      .explore-more {
+        display: block;
+        margin-top: 20px;
+        font-weight: bold;
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .editor-choice-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .editor-choice-item {
+        flex: 0 0 45%;
+        margin-bottom: 20px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .editor-choice-item img {
+        width: 250px;
+        height: 150px;
+        margin-left: 10px;
+        transition: transform 0.3s; /* Transition for scaling effect */
+      }
+
+      .editor-choice-item:hover img {
+        transform: scale(1.1); /* Scale up on hover */
+      }
+
+      .editor-choice-item h4 {
+        margin: 0 0 10px;
+      }
+
+      .editor-choice-item div {
+        flex: 1;
+      }
+
+      .get-started-text {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 20px;
+      }
+
+      .franchisors-corner {
+        margin-top: 40px;
+        position: relative;
+      }
+
+      .franchisors-content {
+        margin-top: 20px;
+      }
+
+      .franchisor-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .franchisor-item img {
+        flex: 0 0 150px;
+        height: 150px;
+        margin-right: 20px;
+        transition: transform 0.3s; /* Transition for scaling effect */
+      }
+
+      .franchisor-item:hover img {
+        transform: scale(1.1); /* Scale up on hover */
+      }
+
+      .franchisor-details {
+        flex: 1;
+      }
+
+      .franchisor-details h4 {
+        margin: 10px 0;
+      }
+
+      .read-more {
+        margin-top: 10px;
+        font-weight: bold;
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .explore-more-franchisors {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-weight: bold;
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 15px; /* Decreased font size */
+        margin-top: 5px; /* Optional: Adjust margin if needed */
+      }
+
+      /* New Load More button styles */
+      .load-more-button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: fit-content; /* Adjust width based on content */
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .image-section {
+          flex: 0 0 100%; /* Full width on smaller screens */
+          margin-right: 0; /* Remove margin */
+        }
+
+        .sidebar {
+          flex: 0 0 100%; /* Full width on smaller screens */
+          margin-top: 20px; /* Space out the sidebar */
+        }
+
+        .editor-choice-item {
+          flex: 0 0 100%; /* Full width for editor choice items */
+        }
+
+        .franchisor-item {
+          flex-direction: column; /* Stack items vertically */
+          align-items: center; /* Center align items */
+        }
+
+        .franchisor-item img {
+          width: 100%; /* Make the image full width on smaller devices */
+          height: auto; /* Maintain aspect ratio */
+          max-width: 300px; /* Limit max width if desired */
+        }
+
+        .franchisor-details {
+          text-align: center; /* Center align text for better aesthetics */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .article-title {
+          font-size: 20px; /* Smaller font for mobile */
+        }
+
+        .editor-choice-item img {
+          width: 100px; /* Smaller image size for mobile */
+          height: 100px; /* Maintain aspect ratio */
+        }
+
+        .franchisor-item img {
+          width: 280px; /* Smaller image size for mobile */
+          height: 100px; /* Maintain aspect ratio */
+        }
+      }
+
+      /* Specific adjustments for 320px */
+      @media (max-width: 320px) {
+        .explore-more {
+          font-size: 14px; /* Smaller font size */
+          text-align: center; /* Center text */
+          margin-top: 10px; /* Adjust margin */
+        }
+
+        .explore-more-franchisors {
+          font-size: 14px;
+          margin-top: 26px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="trend-container">
+        <hr class="horizontal-line" />
+        <h2 class="trend">Trend</h2>
+        <hr class="horizontal-line" />
+      </div>
+
+      <h1 class="article-title">Article</h1>
+
+      <div class="content">
+        <div class="image-section">
+          <div class="image-container">
+            <img src="1.webp" alt="Sample Image" />
+          </div>
+          <h3 class="image-title">Image Title</h3>
+          <p class="image-description">
+            This is a description of the image. <a href="#">Read more</a>
+          </p>
+        </div>
+
+        <div class="sidebar">
+          <div class="sidebar-item">
+            <h3>Heading 1</h3>
+            <p>This is a paragraph under heading 1.</p>
+          </div>
+          <div class="sidebar-item">
+            <h3>Heading 2</h3>
+            <p>This is a paragraph under heading 2.</p>
+          </div>
+          <div class="sidebar-item">
+            <h3>Heading 3</h3>
+            <p>This is a paragraph under heading 3.</p>
+          </div>
+          <a href="#" class="explore-more">Explore More</a>
+        </div>
+      </div>
+
+      <div class="editor-choice-container">
+        <hr class="horizontal-line" />
+        <h4 class="editor-choice">Most Shared</h4>
+        <hr class="horizontal-line" />
+      </div>
+
+      <h2 class="editor-choice-title">Editor's Choice</h2>
+
+      <div class="editor-choice-content">
+        <div class="editor-choice-item">
+          <div>
+            <h4>Choice 1</h4>
+            <p>
+              This is a description for editor's choice 1.
+              <a href="#">Read more</a>
+            </p>
+          </div>
+          <img src="1.webp" alt="Choice 1 Image" />
+        </div>
+        <div class="editor-choice-item">
+          <div>
+            <h4>Choice 2</h4>
+            <p>
+              This is a description for editor's choice 2.
+              <a href="#">Read more</a>
+            </p>
+          </div>
+          <img src="1.webp" alt="Choice 2 Image" />
+        </div>
+        <div class="editor-choice-item">
+          <div>
+            <h4>Choice 3</h4>
+            <p>
+              This is a description for editor's choice 3.
+              <a href="#">Read more</a>
+            </p>
+          </div>
+          <img src="1.webp" alt="Choice 3 Image" />
+        </div>
+        <div class="editor-choice-item">
+          <div>
+            <h4>Choice 4</h4>
+            <p>
+              This is a description for editor's choice 4.
+              <a href="#">Read more</a>
+            </p>
+          </div>
+          <img src="1.webp" alt="Choice 4 Image" />
+        </div>
+      </div>
+
+      <div class="get-started-container">
+        <hr class="horizontal-line" />
+        <h2 class="get-started">Get Started</h2>
+        <hr class="horizontal-line" />
+      </div>
+
+      <div class="franchisors-corner">
+        <h2>
+          Franchisors' Corner
+          <span class="explore-more-franchisors">Explore More</span>
+        </h2>
+        <div class="franchisors-content">
+          <div class="franchisor-item">
+            <img src="1.webp" alt="Franchisor Image 1" />
+            <div class="franchisor-details">
+              <h4>Heading 1</h4>
+              <p>
+                This is a paragraph under heading 1.
+                <span class="read-more">Read more</span>
+              </p>
+            </div>
+          </div>
+          <div class="franchisor-item">
+            <img src="1.webp" alt="Franchisor Image 2" />
+            <div class="franchisor-details">
+              <h4>Heading 2</h4>
+              <p>
+                This is a paragraph under heading 2.
+                <span class="read-more">Read more</span>
+              </p>
+            </div>
+          </div>
+          <div class="franchisor-item">
+            <img src="1.webp" alt="Franchisor Image 3" />
+            <div class="franchisor-details">
+              <h4>Heading 3</h4>
+              <p>
+                This is a paragraph under heading 3.
+                <span class="read-more">Read more</span>
+              </p>
+            </div>
+          </div>
+          <div class="franchisor-item">
+            <img src="1.webp" alt="Franchisor Image 4" />
+            <div class="franchisor-details">
+              <h4>Heading 4</h4>
+              <p>
+                This is a paragraph under heading 4.
+                <span class="read-more">Read more</span>
+              </p>
+            </div>
+          </div>
+          <div class="franchisor-item">
+            <img src="1.webp" alt="Franchisor Image 5" />
+            <div class="franchisor-details">
+              <h4>Heading 5</h4>
+              <p>
+                This is a paragraph under heading 5.
+                <span class="read-more">Read more</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Centered Load More Button -->
+        <a href="#" class="load-more-button">Load More</a>
+      </div>
+    </div>
+  </body>
+</html>
